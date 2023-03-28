@@ -1,1 +1,1 @@
-# STT2860 Data Manipulation
+# STT2860Data Manipulation
