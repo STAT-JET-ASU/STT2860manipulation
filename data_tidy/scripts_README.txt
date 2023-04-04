@@ -1,0 +1,1 @@
+Often we use scripts to process data from raw to tidy, especially if we have a process that we are repeating on a regular basis, like downloading data from a server and and creating a weekly or monthly report. This helps us automate our activities and make them reproducible.

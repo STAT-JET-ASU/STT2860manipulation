@@ -1,0 +1,1 @@
+This is the folder where your raw (often un-tidy) data files go.
