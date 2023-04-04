@@ -1,0 +1,111 @@
+---
+title: "Pivoting Datasets"
+subtitle: "STT2860 Intro to Data Management & Visualization S23"
+author: "Author: YOUR NAME HERE"
+date: "`r format(Sys.time(), '%A, %B %d, %Y @ %I:%M %p')`"
+output: 
+  html_document: 
+    theme: cosmo
+    highlight: textmate
+---
+
+```{r globaloptions, include = FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  comment = NA
+)
+```
+***
+
+### Packages Used
+
+```{r packages}
+library(tidyverse)
+library(fivethirtyeight) # you will need to install this ONCE
+```
+
+### The `drinks` Dataset
+
+Go to [Chapter 4 Data Importing and "Tidy" Data](https://moderndive.com/4-tidy.html) in *Modern Dive*.
+
+#### Create `drinks_smaller`
+
+```{r drinks_smaller}
+
+```
+
+#### Create `drinks_smaller_tidy`
+
+```{r drinks_smaller_tidy_1}
+
+```
+
+```{r drinks_smaller_tidy_2}
+
+```
+
+```{r drinks_smaller_tidy_3}
+
+```
+
+Test with the `identical()` and `all.equal()` functions.
+
+```{r identical_equal_test}
+
+```
+
+### The `dem_score` Dataset
+
+#### Read in `dem_score`
+
+```{r read_dem_score}
+dem_score <- read_csv("../data_raw/dem_score.csv")
+head(dem_score)
+```
+
+#### Create `guat_dem`
+
+```{r guat_dem}
+
+```
+
+#### Create `guat_dem_tidy`
+
+```{r guat_dem_tidy}
+
+```
+
+#### Create `dem_score_tidy`
+
+```{r dem_score_tidy}
+
+```
+
+### The `bball` Dataset
+
+#### Create `bball`
+
+```{r bball}
+bball <- tibble(
+  player = rep(c("A", "B"), each = 4),
+  year = rep(c(1, 1, 2, 2), times = 2),
+  stat = rep(c("points", "assists"), times = 4),
+  amount = c(14, 6, 18, 7, 22, 9, 38, 4)
+)
+bball
+```
+
+#### Create `bball_wide`
+
+We want `points` and `assists` to be separate variables (columns).
+
+```{r bball_wide}
+
+```
+
+
+***
+```{r}
+sessionInfo()
+```
