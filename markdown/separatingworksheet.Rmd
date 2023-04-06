@@ -1,0 +1,121 @@
+---
+title: "Separating and Uniting Variables"
+subtitle: "STT2860 Intro to Data Management & Visualization S23"
+author: "Author: YOUR NAME HERE"
+date: "`r format(Sys.time(), '%A, %B %d, %Y @ %I:%M %p')`"
+output: 
+  html_document: 
+    theme: cosmo
+    highlight: textmate
+---
+
+```{r globaloptions, include = FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  comment = NA
+)
+```
+***
+
+### Packages Used
+
+```{r packages}
+library(tidyverse)
+library(skimr)
+```
+
+### Datasets
+
+#### Powerball Dataset #1
+
+Downloaded from [Lottery Powerball Winning Numbers: Beginning 2010](https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010)
+
+```{r read_power1}
+power1 <- read_csv("../data_raw/Lottery_Powerball_Winning_Numbers_Beginning_2010.csv") %>% 
+  rename(drawdate = `Draw Date`,
+         numbers = `Winning Numbers`,
+         multiplier = Multiplier)
+```
+
+```{r skim_power1}
+skim(power1)
+```
+
+```{r head_power1}
+head(power1)
+```
+
+#### Powerball Dataset #2
+
+Downloaded from [Texas Lottery: Powerball](https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/download.html)
+
+```{r read_power2}
+power2 <- read_csv("../data_raw/texaspowerball.csv",
+  col_names = c(
+    "game",
+    "month",
+    "day",
+    "year",
+    "num1",
+    "num2",
+    "num3",
+    "num4",
+    "num5",
+    "powerball",
+    "powerplay"
+  )
+)
+```
+
+```{r skim_power2}
+skim(power2)
+```
+
+```{r head_power2}
+head(power2)
+```
+
+#### SKyscrapers Dataset
+
+Read about the dataset [HERE](https://stat-jet-asu.github.io/Datasets/InstructorDescriptions/USskyscrapers.html)
+
+```{r read_skyscrape}
+sky <- read_csv("https://raw.githubusercontent.com/STAT-JET-ASU/Datasets/master/Instructor/USskyscrapers.csv")
+```
+
+```{r skim_sky}
+skim(sky)
+```
+
+```{r head_sky}
+head(sky)
+```
+
+### Separating Variables
+
+#### Powerball #1
+
+```{r}
+
+```
+
+#### Skyscrapers
+
+```{r}
+
+```
+
+### Uniting Variables
+
+#### Powerball #2
+
+```{r}
+
+```
+
+
+***
+```{r}
+sessionInfo()
+```
