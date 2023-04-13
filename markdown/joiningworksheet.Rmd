@@ -1,0 +1,107 @@
+---
+title: "Joining Datasets/Tables"
+subtitle: "STT2860 Intro to Data Management & Visualization S23"
+author: "Author: YOUR NAME HERE"
+date: "`r format(Sys.time(), '%A, %B %d, %Y @ %I:%M %p')`"
+output: 
+  html_document: 
+    theme: cosmo
+    highlight: textmate
+---
+
+```{r globaloptions, include = FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  comment = NA
+)
+```
+***
+
+### Packages Used
+
+```{r packages}
+library(tidyverse)
+library(nycflights13)
+library(skimr)
+```
+
+### Datasets
+
+#### Random People Data
+
+Created using [Mockaroo Random Data Generator](https://www.mockaroo.com/)
+
+```{r read_people01}
+people01 <- read_csv("../data_raw/people01.csv")
+people01
+```
+
+```{r read_people02}
+people02 <- read_csv("../data_raw/people02.csv")
+people02
+```
+
+```{r read_other02}
+other02 <- read_csv("../data_raw/other02.csv")
+other02
+```
+
+#### NYC Flights 2013 Data
+
+Data from the `nycflights13` package. Also used as an example in [Section 3.7](https://moderndive.com/3-wrangling.html#joins) of Modern Dive.
+
+```{r, echo = FALSE, fig.align="center"}
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/245292d1ea724f6c3fd8a92063dcd7bfb9758d02/badf8/images/r4ds/relational-nycflights.png")
+```
+
+```{r}
+skim(airlines)
+head(airlines)
+```
+
+```{r}
+skim(airports)
+head(airports)
+```
+
+```{r}
+skim(flights)
+head(flights)
+```
+
+```{r}
+skim(planes)
+head(planes)
+```
+
+```{r}
+skim(weather)
+head(weather)
+```
+
+### Joining Data
+
+#### Binding Rows
+
+```{r}
+
+```
+
+#### Binding Columns
+
+```{r}
+
+```
+
+#### Other Joins
+
+```{r}
+
+```
+
+
+***
+```{r}
+sessionInfo()
+```
