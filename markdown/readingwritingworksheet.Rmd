@@ -107,7 +107,7 @@ tail(mlco2v2)
 
 ## Delimited Files
 
-Delimited is generally defined as "having fixed boundaries or limits". A delimited file is a file with columns separated by delimiters (other than white space). Two common delimiters are commas and tabs (\t in `R`). Character data may or may not be enclosed in quotes.
+Delimited is generally defined as "having fixed boundaries or limits". A delimited file is a file with columns separated by delimiters (other than white space). Two common delimiters are commas and tabs. Character data may or may not be enclosed in quotes.
 
 ### The `read_delim()` Function
 
@@ -143,6 +143,7 @@ Delimited is generally defined as "having fixed boundaries or limits". A delimit
 
 ```{r}
 # file: WCSweatherdays.csv
+# to indicate comma, use ","
 
 ```
 
@@ -150,7 +151,7 @@ Delimited is generally defined as "having fixed boundaries or limits". A delimit
 
 ```{r}
 # file: WCSweatherdays.tab
-
+# to indicate tab, use "\t"
 
 ```
 
@@ -190,14 +191,14 @@ Delimited is generally defined as "having fixed boundaries or limits". A delimit
 #### US Skyscrapers Example #1
 
 ```{r}
-# file: WCSweatherdays.csv
+# file: USskyscrapers.csv
 
 ```
 
 #### US Skyscrapers Example #2
 
 ```{r}
-# file: WCSweatherdays.csv
+# file: USskyscrapersnonames.csv
 
 ```
 
